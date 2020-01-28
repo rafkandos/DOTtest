@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EngineeringTest.Models;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace EngineeringTest.Controllers
 {
@@ -122,6 +126,8 @@ namespace EngineeringTest.Controllers
             return output;
         }
 
+
+
         // GET: api/Provinces/5
         //[HttpGet("{id}")]
         //public async Task<ActionResult<Province>> GetProvince(int id)
@@ -137,64 +143,65 @@ namespace EngineeringTest.Controllers
         //}
 
         // PUT: api/Provinces/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutProvince(int id, Province province)
-        {
-            if (id != province.province_id)
-            {
-                return BadRequest();
-            }
 
-            _context.Entry(province).State = EntityState.Modified;
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutProvince(int id, Province province)
+        //{
+        //    if (id != province.province_id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProvinceExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    _context.Entry(province).State = EntityState.Modified;
 
-            return NoContent();
-        }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!ProvinceExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-        // POST: api/Provinces
-        [HttpPost]
-        public async Task<ActionResult<Province>> PostProvince(Province province)
-        {
-            _context.Province.Add(province);
-            await _context.SaveChangesAsync();
+        //    return NoContent();
+        //}
 
-            return CreatedAtAction("GetProvince", new { id = province.province_id }, province);
-        }
+        //// POST: api/Provinces
+        //[HttpPost]
+        //public async Task<ActionResult<Province>> PostProvince(Province province)
+        //{
+        //    _context.Province.Add(province);
+        //    await _context.SaveChangesAsync();
 
-        // DELETE: api/Provinces/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Province>> DeleteProvince(int id)
-        {
-            var province = await _context.Province.FindAsync(id);
-            if (province == null)
-            {
-                return NotFound();
-            }
+        //    return CreatedAtAction("GetProvince", new { id = province.province_id }, province);
+        //}
 
-            _context.Province.Remove(province);
-            await _context.SaveChangesAsync();
+        //// DELETE: api/Provinces/5
+        //[HttpDelete("{id}")]
+        //public async Task<ActionResult<Province>> DeleteProvince(int id)
+        //{
+        //    var province = await _context.Province.FindAsync(id);
+        //    if (province == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return province;
-        }
+        //    _context.Province.Remove(province);
+        //    await _context.SaveChangesAsync();
 
-        private bool ProvinceExists(int id)
-        {
-            return _context.Province.Any(e => e.province_id == id);
-        }
+        //    return province;
+        //}
+
+        //private bool ProvinceExists(int id)
+        //{
+        //    return _context.Province.Any(e => e.province_id == id);
+        //}
     }
 }

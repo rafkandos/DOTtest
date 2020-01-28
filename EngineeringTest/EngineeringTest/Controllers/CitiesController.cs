@@ -157,64 +157,65 @@ namespace EngineeringTest.Controllers
         //}
 
         // PUT: api/Cities/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCity(int id, City city)
-        {
-            if (id != city.city_id)
-            {
-                return BadRequest();
-            }
 
-            _context.Entry(city).State = EntityState.Modified;
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutCity(int id, City city)
+        //{
+        //    if (id != city.city_id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CityExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    _context.Entry(city).State = EntityState.Modified;
 
-            return NoContent();
-        }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!CityExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-        // POST: api/Cities
-        [HttpPost]
-        public async Task<ActionResult<City>> PostCity(City city)
-        {
-            _context.City.Add(city);
-            await _context.SaveChangesAsync();
+        //    return NoContent();
+        //}
 
-            return CreatedAtAction("GetCity", new { id = city.city_id }, city);
-        }
+        //// POST: api/Cities
+        //[HttpPost]
+        //public async Task<ActionResult<City>> PostCity(City city)
+        //{
+        //    _context.City.Add(city);
+        //    await _context.SaveChangesAsync();
 
-        // DELETE: api/Cities/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<City>> DeleteCity(int id)
-        {
-            var city = await _context.City.FindAsync(id);
-            if (city == null)
-            {
-                return NotFound();
-            }
+        //    return CreatedAtAction("GetCity", new { id = city.city_id }, city);
+        //}
 
-            _context.City.Remove(city);
-            await _context.SaveChangesAsync();
+        //// DELETE: api/Cities/5
+        //[HttpDelete("{id}")]
+        //public async Task<ActionResult<City>> DeleteCity(int id)
+        //{
+        //    var city = await _context.City.FindAsync(id);
+        //    if (city == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return city;
-        }
+        //    _context.City.Remove(city);
+        //    await _context.SaveChangesAsync();
 
-        private bool CityExists(int id)
-        {
-            return _context.City.Any(e => e.city_id == id);
-        }
+        //    return city;
+        //}
+
+        //private bool CityExists(int id)
+        //{
+        //    return _context.City.Any(e => e.city_id == id);
+        //}
     }
 }

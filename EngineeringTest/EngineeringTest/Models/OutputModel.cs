@@ -11,7 +11,7 @@ namespace EngineeringTest.Models
 
     public class paramName
     {
-        public string name { get; set; }
+        public string province { get; set; }
     }
 
     public class query
@@ -48,6 +48,18 @@ namespace EngineeringTest.Models
     {
         public object query { get; set; }
         public object status { get; set; }
+        public object result { get; set; }
+    }
+
+    public class ResultAPI
+    {
+        public object rajaongkir { get; set; }
+    }
+
+    public class ResultAnying
+    {
+        //public object query { get; set; }
+        //public object status { get; set; }
         public object result { get; set; }
     }
 }
