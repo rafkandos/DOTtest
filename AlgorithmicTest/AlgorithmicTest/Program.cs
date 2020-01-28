@@ -20,15 +20,12 @@ namespace AlgorithmicTest
     {
         public int solution(int[] A)
         {
-            // write your code in C# 6.0 with .NET 4.5 (Mono)
             int i, j = 0, n = A.Length;
             if (A != null && n != 0)
             {
                 Array.Sort(A);
                 for (j = A[0], i = 0; i < n; i++, j++)
                 {
-                    //if (j == A[i]) continue;
-                    //else return j;
                     if (j == A[i])
                     {
                         continue;
@@ -39,14 +36,12 @@ namespace AlgorithmicTest
                     }
                 }
 
-                //if (i == n) return (A[0] == 2) ? 1 : ++A[--n]
                 if (i == n)
                 {
                     return (A[0] == 2) ? 1 : ++A[--n];
                 }
 
             }
-            //else return 1;
             else
             {
                 return 1;
