@@ -1,0 +1,11 @@
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\bin\Debug\netcoreapp2.2\AlgorithmicTest.deps.json
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\bin\Debug\netcoreapp2.2\AlgorithmicTest.runtimeconfig.json
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\bin\Debug\netcoreapp2.2\AlgorithmicTest.runtimeconfig.dev.json
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\bin\Debug\netcoreapp2.2\AlgorithmicTest.dll
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\bin\Debug\netcoreapp2.2\AlgorithmicTest.pdb
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\obj\Debug\netcoreapp2.2\AlgorithmicTest.csprojAssemblyReference.cache
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\obj\Debug\netcoreapp2.2\AlgorithmicTest.csproj.CoreCompileInputs.cache
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\obj\Debug\netcoreapp2.2\AlgorithmicTest.AssemblyInfoInputs.cache
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\obj\Debug\netcoreapp2.2\AlgorithmicTest.AssemblyInfo.cs
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\obj\Debug\netcoreapp2.2\AlgorithmicTest.dll
+D:\FFOutput\testDOT\AlgorithmicTest\AlgorithmicTest\obj\Debug\netcoreapp2.2\AlgorithmicTest.pdb
